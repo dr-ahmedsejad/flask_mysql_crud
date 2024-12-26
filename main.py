@@ -34,19 +34,6 @@ def index():
     cur.close()
     return render_template('index.html', items=items)
 
-# Route : Créer un nouvel item
-# @app.route('/create', methods=['GET', 'POST'])
-# def create():
-#     if request.method == 'POST':
-#         name = request.form['name']
-#         description = request.form['description']
-#         cur = mysql.connection.cursor()
-#         cur.execute("INSERT INTO items (name, description) VALUES (%s, %s)", (name, description))
-#         mysql.connection.commit()
-#         cur.close()
-#         return redirect(url_for('index'))
-#     return render_template('create.html')
-
 @app.route('/create', methods=['GET', 'POST'])
 def create():
     if request.method == 'POST':

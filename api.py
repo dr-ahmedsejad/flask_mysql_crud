@@ -34,7 +34,6 @@ def get_items():
     items = cur.fetchall()
     cur.close()
 
-    # Inclure l'image_path dans les résultats
     results = [
         {
             'id': row[0],
